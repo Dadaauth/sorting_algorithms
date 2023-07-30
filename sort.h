@@ -16,6 +16,16 @@ typedef struct listint_s
 	struct listint_s *prev;
 	struct listint_s *next;
 } listint_t;
+/**
+ * struct StackFrame - a structure
+ * @high: high
+ * @low: low
+ */
+struct StackFrame
+{
+	int low;
+	int high;
+};
 
 
 /* Functions */
@@ -24,5 +34,6 @@ void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
 
 #endif
